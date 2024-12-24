@@ -23,7 +23,7 @@ export const createInstance = async (): Promise<FhevmInstance> => {
       kmsContractAddress: kmsAdd,
       aclContractAddress: aclAdd,
       networkUrl: network.config.url,
-      gatewayUrl: GATEWAY_URL,
+      gatewayUrl: process.env.GATEWAY_URL,
     });
     return instance;
   }
